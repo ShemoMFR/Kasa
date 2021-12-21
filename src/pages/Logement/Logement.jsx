@@ -1,11 +1,15 @@
 /* Librairies */ 
 import React from "react";
-import { useParams } from "react-router-dom";
 
 /* css */
 import "./Logement.css";
 
 class Logement extends React.Component {
+
+      componentDidMount() {
+            console.log(this.props.match.params.id);
+      }
+
       render() {
             return (
                   <div>

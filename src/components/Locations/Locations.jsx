@@ -1,5 +1,6 @@
 /* Librairies */ 
 import React from 'react';
+import { Link } from "react-router-dom";
 
 /* database */ 
 import db from "../../db/db.json"
@@ -11,14 +12,15 @@ import "./Locations.css";
 class Locations extends React.Component {
 
       render() {
+
             return (
                   <div className="container1240px bg">
                        <div className="containerGrid">
                              {db.map((location) => {
                                     return (
-                                          <div className="itemGrid" key={location.id}>
-                                              {location.title}
-                                          </div>
+                                          <Link to={`logement/${location.id}`} className="itemGrid" key={location.id}>
+                                              <div className="txtGrid">{location.title}</div>
+                                          </Link>
                                     )
                              })}
                        </div>
