@@ -20,15 +20,17 @@ class App extends React.Component {
     return (
         <div className="App">
             <Navbar />
-             <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/logement/:id" exact component={Logement} />
-                <Route path="/logement/*" exact component={NotFound} />
-                <Route path="/apropos" exact component={Apropos} />
-                <Route path="/*" component={NotFound} />
-            </Switch> 
+            <main>
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/logement/:id" exact component={Logement} />
+                    <Route path="/logement/*" exact component={NotFound} />
+                    <Route path="/apropos" exact component={Apropos} />
+                    <Route path="/*" component={NotFound} />
+                </Switch> 
+            </main>
             <Footer />
-      </div>
+        </div>
     );
   }
 }

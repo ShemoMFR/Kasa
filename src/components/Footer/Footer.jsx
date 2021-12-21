@@ -9,8 +9,10 @@ class Footer extends React.Component {
 
       render() {
             return (
-                  <div className="container1240px footer">
-                       FOOTER
+                  <div className="containerFooter">
+                        <div className="container1240px footer">
+                              FOOTER
+                        </div>
                   </div>
             )
       }
