@@ -19,6 +19,7 @@ class Locations extends React.Component {
                              {db.map((location) => {
                                     return (
                                           <Link to={`logement/${location.id}`} className="itemGrid" key={location.id}>
+                                              <img className='imgGrid' src={`${location.cover}`} alt='illustration de la location'/>
                                               <div className="txtGrid">{location.title}</div>
                                           </Link>
                                     )

@@ -4,6 +4,9 @@ import React from "react";
 /* css */
 import "./Logement.css";
 
+/* Component */ 
+import Dropdown from "../../components/Dropdown/Dropdown";
+
 class Logement extends React.Component {
 
       componentDidMount() {
@@ -13,10 +16,13 @@ class Logement extends React.Component {
       render() {
             return (
                   <div>
-                        TEST LOGEMENT
+                        <Dropdown equipement={'test'} />
                   </div>
             )
       }
 }
 
 export default Logement;
+
+
+

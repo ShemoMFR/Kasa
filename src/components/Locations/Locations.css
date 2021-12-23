@@ -17,7 +17,14 @@
       position: relative;
       Height: 340px; 
       border-Radius: 10px;
-      background: linear-gradient(180deg, rgba(255, 96, 96, 1) 0%, rgba(255, 36, 36, 0.6) 50%, rgba(255, 96, 96, 1) 100%);
+      /* background: linear-gradient(180deg, rgba(255, 96, 96, 1) 0%, rgba(255, 36, 36, 0.6) 50%, rgba(255, 96, 96, 1) 100%); */
+}
+
+.imgGrid {
+      width: 100%;
+      Height: 100%;
+      border-Radius: 10px;
+      object-fit: cover;
 }
 
 .txtGrid {
@@ -29,5 +36,7 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 142.6%;      
-      color: #FFFFFF;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      z-index: 10;
 }

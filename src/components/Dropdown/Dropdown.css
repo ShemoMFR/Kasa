@@ -1,0 +1,82 @@
+/* add wrapper, continue with font-size */
+.dropDown {
+      position: relative;
+      Width: 582px;
+}
+
+.dropdownTitle, .content {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      Line-height: 25,67px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+}
+
+.dropdownTitle {
+      display: flex;
+      justify-content: space-between;
+      background-color: #FF6060;
+      border-radius: 5px;
+      Height: 52px;
+      color: white;
+      cursor: pointer;
+      transition: all 500ms;
+}
+
+.chevron {
+      font-size: 30px;
+      rotate: 90deg; 
+      transform: scaleY(1.8); 
+      margin-right: 20px;
+      font-family: 'Varela Round', sans-serif;
+}
+
+.content {
+      color: #FF6060;
+      padding: 10px 20px;
+      transition: all 500ms;
+}
+
+.dropDown[open] .content {
+      animation-name: invisiblyGrowFontSize, fadeIn;
+      animation-duration: 200ms, 200ms;
+      animation-delay: 0ms, 200ms;
+      border-radius: 0 0 5px 5px;
+}
+
+.dropDown[open] .chevron {
+      rotate: 270deg;
+}
+
+.dropDown[open] .dropdownTitle {
+      border-radius: 5px 5px 0 0;
+}
+
+.content {
+      background: #F7F7F7;
+      border-radius: 10px;
+}
+
+ @keyframes invisiblyGrowFontSize {
+	0% {
+            font-size: 0;
+            opacity: 0;
+	}
+	100% {
+            font-size: 1em;
+            opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+	100% {
+		opacity: 1;
+	}
+}
+
