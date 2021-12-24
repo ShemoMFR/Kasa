@@ -1,0 +1,19 @@
+
+.tag {
+    Width: 115px;
+    padding: 5px 20px;
+    background: #FF6060;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.containerTags {
+    margin: 20px 0;
+}

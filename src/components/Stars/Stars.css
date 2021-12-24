@@ -1,0 +1,11 @@
+.star {
+    width: 30px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.containerStars {
+    display: flex;
+    justify-content: flex-end;
+}
+
