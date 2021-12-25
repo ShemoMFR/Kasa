@@ -22,3 +22,12 @@
       background-color: rgba(0, 0, 0, 0.3);
       color: #FFFFFF;
 }
+
+.banniereHome2 {
+      position: relative;
+      width: 1240px;
+      height: 223px;
+      border-radius: 25px;
+      margin: 40px auto;
+      background-image: url("../../images/Bannieres/banniereApropos.png");
+}

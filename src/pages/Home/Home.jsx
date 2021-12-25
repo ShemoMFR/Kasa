@@ -13,7 +13,7 @@ class Home extends React.Component {
       render() {
             return (
                   <div className="container1240px containerHome">
-                        <Banniere />
+                        <Banniere page={'home'}/>
                         <Locations />
                   </div>
             )

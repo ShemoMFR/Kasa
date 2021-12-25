@@ -6,32 +6,22 @@ import './Dropdown.css';
 import "../../style.css"; 
 
 class Dropdown extends Component {
-
-	componentDidMount () {
-		console.log(this.props)
-	}
-
+ 
       render() {
             return (
-                  <div className="container1240px">
-                        <details class="dropDown">
-					{this.props.equipements ? 
-						<summary className="dropdownTitle">Équipements<span className='chevron'> {'>'} </span></summary>
-					:
-						<summary className="dropdownTitle">Description<span className='chevron'> {'>'} </span></summary>
-					}
-                            <div class="content">
-						{this.props.equipements ?
+				<details className="dropDown">
+					<summary className="dropdownTitle">{this.props.name}<span className='chevron'> {'>'} </span></summary>
+					<div className="content">
+						{ this.props.name === 'Équipements' ?
 							<ul style={{listStyleType: "none"}}>
-								{this.props.equipements.map(equip => <li style={{paddingTop: '5px'}}>{equip}</li>)}
+								{this.props.value.map((equip, index) => <li key={index} style={{paddingTop: '5px'}}>{equip}</li>)}
 							</ul>
 						:
-							<p style={{lineHeight: "27px"}}>{this.props.description}</p>
-						}
-                            </div>
-                        </details>
-
-                  </div>
+							<p style={{lineHeight: "27px"}}>{this.props.value}</p>
+						} 
+						
+					</div>
+				</details>
             )
       }
 }

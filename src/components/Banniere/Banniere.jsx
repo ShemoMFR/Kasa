@@ -6,10 +6,19 @@ import ".././../style.css";
 import "./Banniere.css";
 
 class Banniere extends React.Component {
+
       render() {
             return (
-                  <div className="banniereHome">
-                        <div className="txtBanniereHome">Chez vous, partout et ailleurs</div>
+                  <div>
+                        { 
+                              this.props.page == 'home' ?
+                              <div className="banniereHome">
+                                    <div className="txtBanniereHome">Chez vous, partout et ailleurs</div>
+                              </div>
+                              :
+                              <div className="banniereHome2"></div>                        
+                        }
+
                   </div>
             )
       }

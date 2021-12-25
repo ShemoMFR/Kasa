@@ -16,7 +16,7 @@ import Stars from "../../components/Stars/Stars";
 class Logement extends React.Component {
 
       state = {
-            logement_id: db.filter(elem => elem.id === this.props.match.params.id)
+            logement_id: db.filter(elem => elem.id === this.props.match.params.id),
       }
 
       render() {
@@ -37,9 +37,13 @@ class Logement extends React.Component {
                                     <Stars stars={this.state.logement_id[0].rating} />
                               </div>
                         </div>
-                        <div className="containerDrop">
-                              <Dropdown description={this.state.logement_id[0].description}/>
-                              <Dropdown equipements={this.state.logement_id[0].equipments}/>
+                        <div className="containerDrop container1240px">
+                              <div style={{width: '50%', display: 'flex', justifyContent: 'flex-start'}}>
+                                    <Dropdown name={'description'} value={this.state.logement_id[0].description}/>
+                              </div>
+                              <div style={{width: '50%', display: 'flex', justifyContent: 'flex-end'}}>
+                                    <Dropdown name={'Équipements'} value={this.state.logement_id[0].equipments}/>
+                              </div>
                         </div>
                   </div>
             )
