@@ -8,6 +8,9 @@ import db from '../../db/db';
 import '../../style.css';
 import "./Logement.css";
 
+/* ICONS */
+import chevron from '../../images/chevron-left.svg';
+
 /* Component */ 
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tags from "../../components/Tags/Tags";
@@ -22,7 +25,11 @@ class Logement extends React.Component {
       render() {
             return (
                   <div className="container1240px ">
-                        <img className='imgLogement' src={`${this.state.logement_id[0].cover}`} alt='principal logement'/>
+                        <div style={{position: "relative"}}>
+                              <img className='imgLogement' src={`${this.state.logement_id[0].cover}`} alt='principal logement'/>
+                              <img src={chevron} alt='chevron' className='chevronL'/>
+                              <img src={chevron} alt='chevron' className='chevronR'/>
+                        </div>
                         <div className='headerLogement'>
                               <div className='headerLeft'>
                                     <h1 className='logementTitle'>{this.state.logement_id[0].title}</h1>

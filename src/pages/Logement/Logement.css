@@ -4,7 +4,7 @@
       /* margin-bottom: 400px; */
       justify-content: space-between;
       width: 100%;
-      height: 380px;
+      /* height: 380px; */
 }
 
 .imgLogement {
@@ -12,6 +12,21 @@
       height: 415px;
       border-radius: 25px;
       object-fit: cover;
+}
+
+.chevronL, .chevronR {
+      position: absolute;
+      top: 187px;
+      width: 40px;
+}
+
+.chevronL {
+    left: 40px;
+}
+
+.chevronR {
+      right: 40px;
+      rotate: 180deg;
 }
 
 .logementTitle {
@@ -41,7 +56,6 @@
       display: flex;
       justify-content: space-between;
       margin: 20px 0 0 0;
-
 }
 
 .headerRight {
@@ -71,4 +85,5 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      margin-top: 10px;
 }
