@@ -40,3 +40,21 @@
       font-weight: bold;
       z-index: 10;
 }
+
+@media screen and (max-width: 1240px) {
+      .containerGrid {
+            grid-template-columns: repeat(2, 2fr);
+            grid-template-rows: repeat(6, 340px);
+            
+            padding: 55px 20px;
+      }
+}
+
+@media screen and (max-width: 600px) {
+      .containerGrid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 340px);
+            gap: 55px;
+           
+      }
+}

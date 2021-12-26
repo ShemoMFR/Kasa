@@ -24,6 +24,8 @@
       color: #FFFFFF;
 }
 
-/* .footerImg, .footerTxt {
-      margin-top: 50px;
-} */
+@media screen and (max-width: 1240px) {
+      .footerTxt {
+            text-align: center;
+      }
+}

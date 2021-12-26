@@ -23,3 +23,9 @@
       color: #FF6060;
       text-decoration: none;
 }
+
+@media screen and (max-width: 1240px) {
+      .containerNavbar {
+            padding: 40px 20px;
+      }
+}

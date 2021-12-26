@@ -11,7 +11,7 @@ class Banniere extends React.Component {
             return (
                   <div>
                         { 
-                              this.props.page == 'home' ?
+                              this.props.page === 'home' ?
                               <div className="banniereHome">
                                     <div className="txtBanniereHome">Chez vous, partout et ailleurs</div>
                               </div>

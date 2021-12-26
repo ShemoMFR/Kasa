@@ -31,3 +31,14 @@
       margin: 40px auto;
       background-image: url("../../images/Bannieres/banniereApropos.png");
 }
+
+@media screen and (max-width: 1240px) {
+      .banniereHome, .banniereHome2 {
+            width: 98%;            
+      }   
+
+      .txtBanniereHome {
+            text-align: center;
+      }
+}
+      
