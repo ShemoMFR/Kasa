@@ -1,7 +1,11 @@
-
+.containerTags {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
 .tag {
-    Width: 115px;
-    padding: 5px 20px;
+    Width: 170px;
+    padding: 5px 10px;
     background: #FF6060;
     border-radius: 10px;
     font-family: Montserrat;
@@ -14,6 +18,29 @@
     margin-right: 10px;
 }
 
-.containerTags {
-    margin: 20px 0;
+@media screen and (max-width: 660px) {
+    .tag {
+        border-radius: 5px;
+        font-size: 12px;
+        width: 130px;
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .tag {
+        border-radius: 5px;
+        font-size: 10px;
+        width: 105px;
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    .tag {
+        border-radius: 5px;
+        font-size: 9px;
+        width: 105px;
+        padding: 5px 5px;
+    }
 }

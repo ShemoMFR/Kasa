@@ -66,7 +66,7 @@ class Logement extends React.Component {
       render() {
             return (
                   <div className="container1240px ">
-                        <div style={{position: "relative"}}>
+                        <div style={{position: "relative", width: "100%"}}>
                               <img className='imgLogement' src={`${this.state.photos[0]}`} ref={this.image} alt='principal logement'/>
                               <img onClick={() => this.handleClickChangePhotosPrev()} src={chevron} ref={this.click1} alt='chevron' className='chevronL'/>
                               <img onClick={() => this.handleClickChangePhotosNext()} src={chevron} ref={this.click2} alt='chevron' className='chevronR'/>
@@ -86,10 +86,10 @@ class Logement extends React.Component {
                               </div>
                         </div>
                         <div className="containerDrop container1240px">
-                              <div style={{width: '50%', display: 'flex', justifyContent: 'flex-start'}}>
+                              <div className='dropdown1' >
                                     <Dropdown name={'description'} value={this.state.logement_id[0].description}/>
                               </div>
-                              <div style={{width: '50%', display: 'flex', justifyContent: 'flex-end'}}>
+                              <div className='dropdown2' >
                                     <Dropdown name={'Équipements'} value={this.state.logement_id[0].equipments}/>
                               </div>
                         </div>

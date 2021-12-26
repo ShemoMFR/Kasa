@@ -28,6 +28,10 @@
 }
 
 .chevron {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
       font-size: 30px;
       rotate: 90deg; 
       transform: scaleY(1.8); 
@@ -81,4 +85,8 @@
 		opacity: 1;
 	}
 }
+
+
+      
+
 

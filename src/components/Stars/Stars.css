@@ -6,6 +6,14 @@
 .containerStars {
     display: flex;
     justify-content: flex-end;
-    margin-top: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .star {
+        width: 25px;
+        height: 25px;
+    }
 }
 
