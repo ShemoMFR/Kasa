@@ -1,0 +1,37 @@
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 85vh;
+}
+
+.title, .txt, .link {
+    font-family: Montserrat;
+    font-style: normal;
+    color: #FF6060;
+    line-height: 142.6%;
+}
+.title {
+    font-weight: bold;
+    font-size: 288px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.txt {
+    font-weight: 500;
+    font-size: 36px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+    padding-top: 40px;
+}
