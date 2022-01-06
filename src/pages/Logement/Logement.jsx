@@ -17,7 +17,7 @@ import Tags from "../../components/Tags/Tags";
 import Stars from "../../components/Stars/Stars";
 
 class Logement extends React.Component {
-    
+
       constructor(props) {
             super(props);
             this.state = {
@@ -28,7 +28,7 @@ class Logement extends React.Component {
             this.image = React.createRef();
             this.click1 = React.createRef();
             this.click2 = React.createRef();
-          }
+      }
 
       componentDidMount() {
             this.setState({photos: [...this.state.logement_id[0].pictures]})
@@ -41,10 +41,10 @@ class Logement extends React.Component {
 
       handleClickChangePhotosPrev() {
 
-             if (this.state.iterator === 0) {
+            if (this.state.iterator === 0) {
                   this.setState({iterator: this.state.photos.length - 1});
                   this.image.current.src = `${this.state.photos[this.state.photos.length - 1]}`;
-                  return true;
+                  return;
             }
 
             this.image.current.src = `${this.state.photos[this.state.iterator - 1]}`;
@@ -56,7 +56,7 @@ class Logement extends React.Component {
             if (this.state.iterator === this.state.photos.length - 1) {
                   this.setState({iterator: 0});
                   this.image.current.src = `${this.state.photos[0]}`;
-                  return true;
+                  return;
             }
 
             this.image.current.src = `${this.state.photos[this.state.iterator + 1]}`;

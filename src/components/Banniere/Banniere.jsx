@@ -18,7 +18,6 @@ class Banniere extends React.Component {
                               :
                               <div className="banniereHome2"></div>                        
                         }
-
                   </div>
             )
       }

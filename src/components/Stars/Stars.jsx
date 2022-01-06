@@ -5,10 +5,6 @@ import React, { Component } from 'react';
 import './Stars.css';
 import "../../style.css";
 
-/* ICON */
-/* import starg from '../../images/star/star.png';  */
-/* import starR from '../../images/star/starR.png'; */
-
 class Stars extends Component {
     
     boucle() {
@@ -20,10 +16,11 @@ class Stars extends Component {
                 <img className='star' src='/starR.png' alt="star" key={i}/>
             )
         }
+        
         for (let i = 0; i < rest; i++) {
-           stars.push(
+            stars.push(
                 <img className='star' src='/star.png' alt="star" key={5 - i}/>
-           ) 
+            ) 
         }
 
         return stars;

@@ -12,7 +12,6 @@ import "./Locations.css";
 class Locations extends React.Component {
 
       render() {
-
             return (
                   <div className="container1240px bg">
                        <div className="containerGrid">
