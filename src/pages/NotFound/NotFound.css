@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
     min-height: 85vh;
 }
 
@@ -13,6 +14,7 @@
     line-height: 142.6%;
 }
 .title {
+    margin: 0 auto;
     font-weight: bold;
     font-size: 288px;
     display: flex;
@@ -34,4 +36,24 @@
     align-items: flex-end;
     text-decoration-line: underline;
     padding-top: 40px;
+}
+
+@media screen and (max-width: 660px) {
+    .title {
+        font-size: 200px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .title {
+        font-size: 100px;
+    }
+
+    .txt {
+        font-size: 24px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
 }

@@ -15,6 +15,7 @@ import chevron from '../../images/chevron-left.svg';
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tags from "../../components/Tags/Tags";
 import Stars from "../../components/Stars/Stars";
+import NotFound from "../NotFound/NotFound";
 
 class Logement extends React.Component {
 
@@ -37,6 +38,8 @@ class Logement extends React.Component {
                   this.click1.current.style.display = 'none';
                   this.click2.current.style.display = 'none';
             }
+
+            console.log(this.state.logement_id[0].hasOwnProperty('pictures'))
       }
 
       handleClickChangePhotosPrev() {
@@ -65,34 +68,44 @@ class Logement extends React.Component {
 
       render() {
             return (
-                  <div className="container1240px ">
-                        <div style={{position: "relative", width: "100%"}}>
-                              <img className='imgLogement' src={`${this.state.photos[0]}`} ref={this.image} alt='principal logement'/>
-                              <img onClick={() => this.handleClickChangePhotosPrev()} src={chevron} ref={this.click1} alt='chevron' className='chevronL'/>
-                              <img onClick={() => this.handleClickChangePhotosNext()} src={chevron} ref={this.click2} alt='chevron' className='chevronR'/>
-                        </div>
-                        <div className='headerLogement'>
-                              <div className='headerLeft'>
-                                    <h1 className='logementTitle'>{this.state.logement_id[0].title}</h1>
-                                    <h2 className='logementSubtitle'>{this.state.logement_id[0].location}</h2>
-                                    <Tags tags={this.state.logement_id[0].tags} />
+                  <div>
+                  { this.state.logement_id.length === 0 ? 
+                        <div className="container1240px ">
+                              <div style={{position: "relative", width: "100%"}}>
+                                    <img className='imgLogement' src={`${this.state.photos[0]}`} ref={this.image} alt='principal logement'/>
+                                    <img onClick={() => this.handleClickChangePhotosPrev()} src={chevron} ref={this.click1} alt='chevron' className='chevronL'/>
+                                    <img onClick={() => this.handleClickChangePhotosNext()} src={chevron} ref={this.click2} alt='chevron' className='chevronR'/>
+                                    <div className='compteur'>{this.state.iterator + 1}/{this.state.photos.length }</div>
                               </div>
-                              <div className='headerRight'>
-                                    <div className='host'>
-                                          <div className="name">{`${this.state.logement_id[0].host.name}`}</div>
-                                          <img className='photo' src={`${this.state.logement_id[0].host.picture}`} alt='profil de lhôte'/>
+                              <div className='headerLogement'>
+                                    <div className='headerLeft'>
+                                          <h1 className='logementTitle'>{this.state.logement_id[0].title}</h1>
+                                          <h2 className='logementSubtitle'>{this.state.logement_id[0].location}</h2>
+                                          <Tags tags={this.state.logement_id[0].tags} />
                                     </div>
-                                    <Stars stars={this.state.logement_id[0].rating} />
+                                    <div className='headerRight'>
+                                          <div className='host'>
+                                                <div className="name">{`${this.state.logement_id[0].host.name}`}</div>
+                                                <img className='photo' src={`${this.state.logement_id[0].host.picture}`} alt='profil de lhôte'/>
+                                          </div>
+                                          <Stars stars={this.state.logement_id[0].rating} />
+                                    </div>
+                              </div>
+                              <div className="containerDrop container1240px">
+                                    <div className='dropdown1' >
+                                          <Dropdown name={'description'} value={this.state.logement_id[0].description}/>
+                                    </div>
+                                    <div className='dropdown2' >
+                                          <Dropdown name={'Équipements'} value={this.state.logement_id[0].equipments}/>
+                                    </div>
                               </div>
                         </div>
-                        <div className="containerDrop container1240px">
-                              <div className='dropdown1' >
-                                    <Dropdown name={'description'} value={this.state.logement_id[0].description}/>
-                              </div>
-                              <div className='dropdown2' >
-                                    <Dropdown name={'Équipements'} value={this.state.logement_id[0].equipments}/>
-                              </div>
+
+                        :
+                        <div>
+                              <NotFound />
                         </div>
+                  }
                   </div>
             )
       }
