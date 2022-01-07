@@ -32,14 +32,14 @@ class Logement extends React.Component {
       }
 
       componentDidMount() {
-            this.setState({photos: [...this.state.logement_id[0].pictures]})
+            if (this.state.logement_id.length !== 0) {
 
-            if (this.state.logement_id[0].pictures.length === 1) {
-                  this.click1.current.style.display = 'none';
-                  this.click2.current.style.display = 'none';
+                  this.setState({photos: [...this.state.logement_id[0].pictures]})
+                  if (this.state.logement_id[0].pictures.length === 1) {
+                        this.click1.current.style.display = 'none';
+                        this.click2.current.style.display = 'none';
+                  }
             }
-
-            console.log(this.state.logement_id[0].hasOwnProperty('pictures'))
       }
 
       handleClickChangePhotosPrev() {
@@ -69,7 +69,7 @@ class Logement extends React.Component {
       render() {
             return (
                   <div>
-                  { this.state.logement_id.length === 0 ? 
+                  { this.state.logement_id.length !== 0 ? 
                         <div className="container1240px ">
                               <div style={{position: "relative", width: "100%"}}>
                                     <img className='imgLogement' src={`${this.state.photos[0]}`} ref={this.image} alt='principal logement'/>
